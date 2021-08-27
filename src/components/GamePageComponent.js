@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import './Game.css'
 import * as ROT from 'rot-js/dist/rot.js'
 import {startScreen} from '../screens/startScreen'
 
@@ -24,13 +25,16 @@ const game = {
         bindEventToScreen('keypress')
         this.switchScreen(startScreen)
     },
+    start(){
+        
+    },
     switchScreen(screen){
         if(this.currentScreen !== null && this.currentScreen !== undefined){
             this.currentScreen.exit()
         }
         this.display.clear()
         this.currentScreen = screen
-        this.currentScreen.enter()
+        this.currentScreen.enter(this)
         this.refresh()
     },
     refresh(){
@@ -55,7 +59,6 @@ class GamePage extends Component {
         
         return(
             <Fragment>
-                <h1>Play Game</h1>
                 <div id="display" />
             </Fragment>
         )
