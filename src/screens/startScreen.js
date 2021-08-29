@@ -10,7 +10,7 @@ export const startScreen = {
 
     },
     render(display){
-        display.drawText(2, 6, '%c{#98ff98}Welcome to Dungeon Crawl Mint Soup!')
+        display.drawText(3, 6, '%c{#98ff98}Welcome to Dungeon Crawl Mint Soup!')
         display.drawText(display._options.width / 2 - 6, 14, 'Press [enter]')
     },
     handleInput(inputType, inputData){
