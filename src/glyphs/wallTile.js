@@ -1,6 +1,6 @@
 import Tile from './tile'
 
 export const wallTile = new Tile({
-    char: '+',
+    char: '#',
     foreground: '#f7d560'
 })
